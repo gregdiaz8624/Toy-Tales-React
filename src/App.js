@@ -9,11 +9,31 @@ import data from './data'
 
 
 class App extends React.Component{
+
+  state = {
+    display: false
+  }
+
+  handleClick = () => {
+    let newBoolean = !this.state.display
+    this.setState({
+      display: newBoolean
+    })
+  }
+
   render(){
     return (
       <>
         <Header/>
-        <ToyForm/>
+        { this.state.display
+            ?
+          <ToyForm/>
+            :
+          null
+        }
+        <div className="buttonContainer">
+          <button onClick={this.handleClick}> Add a Toy </button>
+        </div>
         <ToyContainer/>
       </>
     );
