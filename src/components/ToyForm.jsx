@@ -20,6 +20,10 @@ class ToyForm extends Component {
     this.props.addNewToy(this.state)
   }
 
+  handleDelete = (e) => {
+    this.props.deleteAToy(this.props.toy.name)
+  }
+
   render() {
     return (
       <div className="container">
