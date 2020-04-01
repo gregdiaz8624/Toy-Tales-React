@@ -52,7 +52,7 @@ class App extends React.Component{
 
   deleteAToy = (toyName) => {
     let filteredArray = this.state.toys.filter((toyPOJO) => {
-      return toyPOJO.name !== toyName
+      return toyPOJO.id !== toyName
     })
 
     this.setState({
@@ -60,7 +60,6 @@ class App extends React.Component{
     })
 
   }
-
 
   render(){
     return (
@@ -78,7 +77,6 @@ class App extends React.Component{
         <ToyContainer toys={this.state.toys} 
                       updateToy={this.updateToy}
                       deleteAToy={this.deleteAToy}
-
         />
       </>
     );

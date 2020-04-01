@@ -8,7 +8,7 @@ class ToyCard extends Component {
   }
 
   handleDelete = (e) => {
-    this.props.deleteAToy(this.props.toy.name)
+    this.props.deleteAToy(this.props.toy.id)
   }
 
   render() {
